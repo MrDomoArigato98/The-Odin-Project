@@ -1,0 +1,79 @@
+:root {
+  --nav-bg-color: #BADEFC;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+h1 {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  background-color: var(--nav-bg-color);
+}
+
+#current-date {
+  align-self: center;
+}
+
+input {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+#weather-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#weather-container div{
+  display: grid;
+  width: fit-content;
+  text-align: center;
+  /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+  padding: 1rem;
+}
+
+.spinner { 
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #3d5af1 transparent #3d5af1 transparent;
+    border-radius: 50%;
+    animation: spin-anim 1.2s linear infinite;
+}
+
+@keyframes spin-anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-container {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+}
+.loader{
+  display: none;
+}

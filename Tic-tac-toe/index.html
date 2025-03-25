@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <nav>
+        <h1>Tic-tac-toe</h1>
+    </nav>
+
+    <div class="game-menu">
+        <button id="reset">Reset Game</button>
+        <div>
+            <p1 id="who-playing">Who's playing?</h1>
+        </div>
+    </div>
+
+    <div>
+        <h1 id="winner">Let's see who wins . . .</h1>
+    </div>
+
+    <div class="game">
+        <div class="game-grid">
+            <div class="cell" data-x="0" data-y="0">
+                <h1></h1>
+            </div>
+            <div class="cell" data-x="0" data-y="1">
+                <h1></h1>
+            </div>
+            <div class="cell" data-x="0" data-y="2">
+                <h1></h1>
+            </div>
+            <div class="cell" data-x="1" data-y="0">
+                <h1></h1>
+            </div>
+            <div class="cell" data-x="1" data-y="1">
+                <h1></h1>
+            </div>
+            <div class="cell" data-x="1" data-y="2">
+                <h1></h1>
+            </div>
+            <div class="cell" data-x="2" data-y="0">
+                <h1></h1>
+            </div>
+            <div class="cell" data-x="2" data-y="1">
+                <h1></h1>
+            </div>
+            <div class="cell" data-x="2" data-y="2">
+                <h1></h1>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="theodinproject">
+            <a href="https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe" referrerpolicy="no-referrer">The Odin Project: Tic-tac-toe</a>
+        </div>
+        <div id="link">
+            <a class="imglink" href="https://github.com/MrDomoArigato98">
+                <img src="./img/git.png" alt="GitHub"></img>
+            </a>
+            <a href="https://github.com/MrDomoArigato98">My Github</a>
+        </div>
+    </footer>
+
+
+    <dialog id="dialog-player-1">
+        <div class="dialog-container">
+            <h2>Write your name and symbol </h2>
+            <div class="modal-content">
+                <input type="text" id="player-one-name" placeholder="Enter your name" required>
+                <select id="modal-player-mark">
+                    <option value="X">X</option>
+                    <option value="O">O</option>
+                </select>
+                <button id="next-player">Next Player</button>
+            </div>
+        </div>
+
+        </form>
+        </div>
+    </dialog>
+
+    <dialog id="dialog-player-2">
+        <div class="dialog-container">
+            <h2>Write name for second player</h2>
+            <div class="modal-content">
+                <input type="text" id="player-two-name" placeholder="Enter your name" required>
+                <button id="start-game">Start Game!</button>
+            </div>
+        </div>
+            </form>
+        </div>
+    </dialog>
+
+    
+</body>
+
+</html>

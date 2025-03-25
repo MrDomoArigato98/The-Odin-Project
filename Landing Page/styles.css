@@ -1,0 +1,205 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+/* Navbar container */
+.navbar{
+    display:flex;
+    justify-content: space-around;
+    /* border:2px solid black; */
+    margin-bottom: 50px;
+    
+}
+
+.top{
+    background-color: #1F2937;
+    border:2px solid black;
+    height: 450px;
+}
+
+.logo a{
+    color: #f9faf8;
+    text-decoration: none;
+    font-size:24px;
+    text-shadow: 1px 1px black;
+    
+}
+
+.navbarlinks{
+    /* border:2px solid black; */
+    
+}
+.navbarlinks a{
+    color: #f9faf8;
+    padding: 10px;
+    text-decoration: none;
+    font-size:18px;
+    text-shadow: 1px 1px black;
+}
+
+/* Dealing with the top dark part */
+.signup{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    color: #f9faf8;
+    padding-bottom: 100px;
+}
+
+.signup-text{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #f9faf8;
+    width: 400px;
+
+}
+
+
+.signup-text button{
+    display:flex;
+    background-color: #3882F6;
+    color: #f9faf8;
+    font-size:18px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 8px 32px;
+    border: 1px solid black;
+}
+
+.signup p{
+    margin-top: 5px;
+    color: #e5e7eb;
+
+}
+.signup-text h1{
+    margin:0;
+    font-size: 48px;
+    color: #f9faf8;
+}
+
+.signupimg{
+    display:flex;
+    width: auto;
+    height: 300px;
+
+}
+
+/* middle */
+.middle{
+    /* border:2px solid red; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px;
+}
+
+.middle h1{
+    margin-top: 30px;
+    margin-bottom: 70px;
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;    
+}
+
+.boxes{
+    display:flex;
+    gap: 20px;
+    /* border:2px solid black; */
+    flex-wrap: wrap;
+}
+.boxes div{
+    display:flex;
+    /* border:2px solid black; */
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 180px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.boxes img{
+    height: 150px;
+    align-self: center;
+    width: auto;
+    border:3px solid #3882F6;
+    border-radius: 10px;
+}
+.middle a{
+    padding-top: 5px;
+    color: #263242;
+}
+
+/* Quote begins here with grey background */
+.quotecontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e7eb;
+    height:450px;
+}
+
+.quote{
+    display:flex;
+    width: 800px;
+    color: #1F2937;
+    align-self: center;
+    font-style: italic;
+    font-size: 36px;
+}
+
+.signature{
+    /* border: 2px solid black; */
+    margin-top:20px;
+    display:flex;
+    font-size: 18px;
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+/* footer */
+
+.footer{
+    justify-content: center;
+    align-items: center;
+    display:flex;
+    height: 450px;
+}
+
+.signupbox{
+    display: flex;
+    background-color: #3882F6;
+    height:125px;
+    width: 1000px;
+    border-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.signupbox .text{
+    display:flex;
+    width:400px;
+    
+    flex-direction: column;
+    color: #f9faf8;
+}
+
+.action{
+    font-weight: bold;   
+    margin-bottom: 5px;
+}
+
+.signupbox button{
+    display:flex;
+    border-radius: 5px;
+    background-color: #3882F6;
+    color: #f9faf8;
+    font-size:14px;
+    border: none;
+    padding: 4px 32px;
+    border: 2px solid white;
+}

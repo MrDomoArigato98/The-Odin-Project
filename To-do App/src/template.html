@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <dialog id="dialog">
+        <div class="todos-input">
+        <div class="dialog-container">
+            <h1 class="more">Edit todo</h1>
+            <div id="edit-todo">
+                <input type="text" name="title" id="edit-title" placeholder="Required: Todo title">
+                <textarea name="description" id="edit-description" placeholder="Optional. Describe your task!"></textarea>
+                <p><b>Due date:</b></p>
+                <input type="date" name="due-date" id="edit-due-date">
+
+                <label for="priority-select"><b>Priority:*</b></label>
+                <select name="priority" id="edit-priority-select" required>
+                    <option value="">Select the priority</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+                <div class="buttons">
+                    <button class="todo-btn" id="edit-btn">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </dialog>
+    <div class="content">
+        <div class="left-nav">
+            <div id="projects" class="left-nav-titles">
+                <h2>Projects</h2>
+                <button id="add-projects">
+                    <svg id="add-img" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M9 12H15" stroke="#323232" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path d="M12 9L12 15" stroke="#323232" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                d="M3 12C3 4.5885 4.5885 3 12 3C19.4115 3 21 4.5885 21 12C21 19.4115 19.4115 21 12 21C4.5885 21 3 19.4115 3 12Z"
+                                stroke="#323232" stroke-width="2"></path>
+                        </g>
+                    </svg>
+                </button>
+                <ul id="projects-list">
+                </ul>
+            </div>
+        </div>
+
+        <div id="todos">
+            <h1 id="project">Work</h1>
+            <h1 class="more">Got more todo?</h1>
+            <div class="todos-input">
+                <div id="add-todo">
+                    <input type="text" name="title" id="title" placeholder="Required: Todo title">
+                    <textarea name="description" id="description" placeholder="Optional. Describe your task!"></textarea>
+                    <p><b>Due date:</b></p>
+                    <input type="date" name="due-date" id="due-date">
+
+                    <label for="priority-select"><b>Priority:*</b></label>
+                    <select name="priority" id="priority-select" required>
+                        <option value="">Select the priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+
+                    <div class="buttons">
+                        <button class="todo-btn" id="cancel-btn">Cancel</button>
+                        <button class="todo-btn" id="add-btn">Add</button>
+                    </div>
+                </div>
+            </div>
+            <div class="todos-display">
+            </div>
+            
+
+        </div>
+
+        <template id="todo-template">
+            <div class="todo">
+                <h2 class="todo-title" id="">TITLE</h2>
+                <p class="due-date" id="">DUE-DATE</p>
+                <p class="todo-description hidden" id=""></p>
+                <div class="todo-buttons">
+                    <button class="delete-todo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M9.17065 4C9.58249 2.83481 10.6937 2 11.9999 2C13.3062 2 14.4174 2.83481 14.8292 4"
+                                    stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M20.5 6H3.49988" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round">
+                                </path>
+                                <path
+                                    d="M18.3735 15.3991C18.1965 18.054 18.108 19.3815 17.243 20.1907C16.378 21 15.0476 21 12.3868 21H11.6134C8.9526 21 7.6222 21 6.75719 20.1907C5.89218 19.3815 5.80368 18.054 5.62669 15.3991L5.16675 8.5M18.8334 8.5L18.6334 11.5"
+                                    stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path>
+                                <path d="M9.5 11L10 16" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round">
+                                </path>
+                                <path d="M14.5 11L14 16" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round">
+                                </path>
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="view-todo"> <svg viewBox="0 -4 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <title>view_simple [#815]</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs> </defs>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Dribbble-Light-Preview" transform="translate(-260.000000, -4563.000000)"
+                                        fill="#000000">
+                                        <g id="icons" transform="translate(56.000000, 160.000000)">
+                                            <path
+                                                d="M216,4409.00052 C216,4410.14768 215.105,4411.07682 214,4411.07682 C212.895,4411.07682 212,4410.14768 212,4409.00052 C212,4407.85336 212.895,4406.92421 214,4406.92421 C215.105,4406.92421 216,4407.85336 216,4409.00052 M214,4412.9237 C211.011,4412.9237 208.195,4411.44744 206.399,4409.00052 C208.195,4406.55359 211.011,4405.0763 214,4405.0763 C216.989,4405.0763 219.805,4406.55359 221.601,4409.00052 C219.805,4411.44744 216.989,4412.9237 214,4412.9237 M214,4403 C209.724,4403 205.999,4405.41682 204,4409.00052 C205.999,4412.58422 209.724,4415 214,4415 C218.276,4415 222.001,4412.58422 224,4409.00052 C222.001,4405.41682 218.276,4403 214,4403"
+                                                id="view_simple-[#815]"> </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="edit-todo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M21.2799 6.40005L11.7399 15.94C10.7899 16.89 7.96987 17.33 7.33987 16.7C6.70987 16.07 7.13987 13.25 8.08987 12.3L17.6399 2.75002C17.8754 2.49308 18.1605 2.28654 18.4781 2.14284C18.7956 1.99914 19.139 1.92124 19.4875 1.9139C19.8359 1.90657 20.1823 1.96991 20.5056 2.10012C20.8289 2.23033 21.1225 2.42473 21.3686 2.67153C21.6147 2.91833 21.8083 3.21243 21.9376 3.53609C22.0669 3.85976 22.1294 4.20626 22.1211 4.55471C22.1128 4.90316 22.0339 5.24635 21.8894 5.5635C21.7448 5.88065 21.5375 6.16524 21.2799 6.40005V6.40005Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11 4H6C4.93913 4 3.92178 4.42142 3.17163 5.17157C2.42149 5.92172 2 6.93913 2 8V18C2 19.0609 2.42149 20.0783 3.17163 20.8284C3.92178 21.5786 4.93913 22 6 22H17C19.21 22 20 20.2 20 18V13" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                </button>
+                </div>
+            </div>
+        </template>
+    </div>
+</body>
+
+</html>

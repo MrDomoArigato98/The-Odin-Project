@@ -1,0 +1,268 @@
+:root {
+    --left-nav-bg: #F7F052;
+    --todo-bg: #F2F4F3;
+}
+
+body {
+    font-family: "Roboto";
+    height: 100dvh;
+    width: 100dvw;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100%;
+    width: 100%;
+}
+
+.left-nav {
+    background-color: var(--left-nav-bg);
+}
+
+#todos {
+    font-family: "Sour Gummy";
+    background-color: var(--todo-bg);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    padding: 20px;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+ul {
+    padding: 0 0 0.5rem 0.5rem;
+}
+
+#todo-controls {
+    margin-bottom: 2em;
+}
+
+.left-nav-titles {
+    transition: all 250ms;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 10px;
+    align-items: center;
+    font-size: clamp(0.5em, 2vw, 1.3em);
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#projects-list button {
+    margin: 2px;
+    display: inline-block;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+#projects-list button:hover {
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+#projects-list {
+    grid-column: 1/ span 3;
+}
+
+#project {
+    transition: all 250ms;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    width: 50%;
+}
+
+.more {
+    text-align: center;
+}
+
+.low {
+    background-color: lightgreen;
+}
+
+.medium {
+    background-color: yellow
+}
+
+.high {
+    background-color: red;
+}
+
+dialog {
+    justify-self: center;
+    align-self: center;
+    background-color: #ECE8EF;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#add-todo {
+    width: 90%;
+    font-size: clamp(0.5em, 2vw, 1.3em);
+    border: 1px solid grey;
+    border-radius: 0.25rem;
+    padding: 10px;
+    transition: all 250ms;
+    display: grid;
+}
+
+#edit-todo {
+    width: 90%;
+    font-size: clamp(0.5em, 2vw, 1.3em);
+    border-radius: 0.25rem;
+    padding: 10px;
+    transition: all 250ms;
+    display: grid;
+}
+
+#add-todo input,
+#edit-todo input {
+    border: none;
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25em;
+}
+
+#title {
+    font-weight: bold;
+}
+
+#priority-btn {
+    width: 5rem;
+    max-height: 3rem;
+}
+
+#priority-btn svg {
+    height: 100%;
+    width: 100%;
+}
+
+.priority-active {
+    background-color: #ff1a1a;
+    border-radius: 0.25em;
+    border: 1px solid black;
+}
+
+#add-todo textarea {
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0);
+    resize: none;
+    border: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25em;
+}
+
+.todos-input {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+}
+
+/* todo Buttons */
+#cancel-btn {
+    background-color: grey;
+}
+
+.todo-btn {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin-top: 5px;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+#project {
+    font-size: clamp(0.5em, 5vw, 3em);
+}
+
+template {
+    display: none;
+}
+
+.todo-btn:hover,
+.todo-btn:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.todo-btn:hover {
+    transform: translateY(-1px);
+}
+
+.todo-btn:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+/* todo Buttons */
+.todo-buttons button {
+    width: 3rem;
+    height: 3rem;
+}
+
+.delete-todo svg,
+.view-todo svg,
+.edit-todo svg {
+    height: 100%;
+    width: 100%;
+}
+
+#add-projects svg {
+    height: 100%;
+    width: 100%;
+}
+
+svg {
+    pointer-events: none;
+}
+
+#add-projects {
+    justify-self: center;
+    border: none;
+    cursor: pointer;
+    background: none;
+    width: 3rem;
+    height: 3rem;
+}
